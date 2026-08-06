@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RemaCards - Carta</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+
+.volver{
+
+display:inline-block;
+
+margin:30px;
+
+background:#ffd700;
+
+color:#000;
+
+padding:12px 25px;
+
+border-radius:20px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+.carta-detalle{
+
+box-shadow:0 0 25px rgba(255,215,0,0.15);
+
+}
+
+
+
+.info-carta .dato{
+
+background:#222;
+
+padding:12px;
+
+border-radius:10px;
+
+}
+
+
+
+.estado-disponible{
+
+background:#00c853!important;
+
+}
+
+
+
+.estado-reservada{
+
+background:#ffc107!important;
+
+color:black!important;
+
+}
+
+
+
+.estado-vendida{
+
+background:#d93636!important;
+
+}
+
+
+
+.comprar{
+
+display:inline-block;
+
+background:#00c853;
+
+color:white;
+
+padding:15px 25px;
+
+border-radius:20px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+margin-top:20px;
+
+}
+
+
+
+.compartir{
+
+display:inline-block;
+
+background:#ffd700;
+
+color:black;
+
+padding:15px 25px;
+
+border-radius:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+margin-top:20px;
+
+border:0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<img src="img/logo/RemaCards_logo_Wallapop.jpg" class="logo">
+
+
+<h1>RemaCards</h1>
+
+
+<p>La casa del coleccionista</p>
+
+
+</header>
+
+
+
+
+
+<a href="index.html" class="volver">
+
+⬅ Volver al catálogo
+
+</a>
+
+
+
+
+
+<div id="detalle-carta"></div>
+
+
+
+
+
+
+
+<script>
+
+
+const params =
+new URLSearchParams(window.location.search);
+
+
+const id=params.get("id");
+
+
+
+
+
+fetch("data/cartas.json")
+
+.then(res=>res.json())
+
+.then(cartas=>{
+
+
+const carta=cartas.find(c=>c.id==id);
+
+
+
+
+if(!carta){
+
+
+document.getElementById("detalle-carta").innerHTML=
+
+`
+
+<h2 style="text-align:center">
+
+Carta no encontrada
+
+</h2>
+
+`;
+
+return;
+
+
+}
+
+
+
+
+
+
+
+let claseEstado="";
+
+
+let boton="";
+
+
+
+
+if(carta.estado==="Disponible"){
+
+
+claseEstado="estado-disponible";
+
+
+boton=
+
+`
+
+<a class="comprar"
+
+href="https://wa.me/?text=${encodeURIComponent(
+
+"Hola RemaCards, estoy interesado en la carta de "+carta.jugador
+
+)}">
+
+💬 Comprar por WhatsApp
+
+</a>
+
+`;
+
+
+
+}
+
+
+
+else if(carta.estado==="Reservada"){
+
+
+claseEstado="estado-reservada";
+
+
+boton=
+
+`
+
+<p class="dato">
+
+🟡 Carta reservada
+
+</p>
+
+`;
+
+
+
+}
+
+
+
+else{
+
+
+claseEstado="estado-vendida";
+
+
+boton=
+
+`
+
+<p class="dato">
+
+🔴 Carta vendida
+
+</p>
+
+`;
+
+
+
+}
+
+
+
+
+
+
+document.getElementById("detalle-carta").innerHTML=
+
+
+
+`
+
+<div class="carta-detalle">
+
+
+
+<div>
+
+
+<img src="img/cartas/${carta.imagen}">
+
+</div>
+
+
+
+
+
+<div class="info-carta">
+
+
+
+<h1>
+
+${carta.jugador}
+
+</h1>
+
+
+
+
+
+<p class="dato">
+
+⚽ Equipo: ${carta.equipo}
+
+</p>
+
+
+
+
+<p class="dato">
+
+🏆 Colección: ${carta.coleccion}
+
+</p>
+
+
+
+
+<p class="dato">
+
+📅 Temporada: ${carta.temporada}
+
+</p>
+
+
+
+
+<p class="dato">
+
+🆔 Carta Nº: ${carta.id}
+
+</p>
+
+
+
+
+<p class="dato">
+
+📆 Añadida: ${carta.fecha || "Sin fecha"}
+
+</p>
+
+
+
+
+
+<h2>
+
+${carta.precio} €
+
+</h2>
+
+
+
+
+
+
+<span class="estado ${claseEstado}">
+
+${carta.estado}
+
+</span>
+
+
+
+
+
+${boton}
+
+
+
+
+<br>
+
+
+<button class="compartir" onclick="compartir()">
+
+📲 Compartir carta
+
+</button>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+`;
+
+
+
+
+
+});
+
+
+
+
+
+
+
+function compartir(){
+
+
+navigator.clipboard.writeText(
+window.location.href
+);
+
+
+alert(
+"Enlace copiado"
+);
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

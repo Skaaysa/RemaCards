@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "jugador": "Dani Olmo",
+    "equipo": "FC Barcelona",
+    "coleccion": "Topps Chrome",
+    "temporada": "2025-26",
+    "precio": 33,
+    "estado": "Disponible",
+    "imagen": "dani-olmo-firma.png"
+  },
+  {
+    "id": 2,
+    "jugador": "Pedri",
+    "equipo": "FC Barcelona",
+    "coleccion": "MegaCracks",
+    "temporada": "2025-26",
+    "precio": 2.5,
+    "estado": "Disponible",
+    "imagen": "pedri.jpg"
+  },
+  {
+    "id": 3,
+    "jugador": "Mbappé",
+    "equipo": "Real Madrid",
+    "coleccion": "Adrenalyn XL",
+    "temporada": "2025-26",
+    "precio": 8,
+    "estado": "Disponible",
+    "imagen": "mbappe.jpg"
+  },
+  {
+    "id": 4,
+    "jugador": "15 Aniversario",
+    "equipo": "LaLiga",
+    "coleccion": "Adrenalyn XL",
+    "temporada": "2025-26",
+    "precio": 28,
+    "estado": "Disponible",
+    "imagen": "15-aniversario.jpg"
+  },
+  {
+    "id": 5,
+    "jugador": "Roberto Carlos",
+    "equipo": "Real Madrid",
+    "coleccion": "DAKA",
+    "temporada": "2025-26",
+    "precio": 40,
+    "estado": "Disponible",
+    "imagen": "Roberto-Carlos.jpg"
+  },
+  {
+    "id": 1785939912383,
+    "jugador": "Toni Kroos",
+    "equipo": "Real Madrid",
+    "coleccion": "Adrenalyn XL",
+    "temporada": "2025-26",
+    "precio": 25,
+    "estado": "Disponible",
+    "imagen": "1785939912376-ChatGPT Image 30 jul 2026, 13_31_46.png"
+  }
+]

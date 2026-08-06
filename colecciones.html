@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RemaCards - Colecciones</title>
+
+<link rel="icon" href="img/logo/favicon.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+
+.colecciones-container{
+
+width:90%;
+
+margin:50px auto;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+}
+
+
+
+.coleccion{
+
+background:#151515;
+
+border:1px solid #333;
+
+border-radius:20px;
+
+padding:30px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+
+.coleccion:hover{
+
+transform:translateY(-8px);
+
+border-color:#ffd600;
+
+}
+
+
+
+.coleccion img{
+
+width:160px;
+
+height:160px;
+
+object-fit:contain;
+
+}
+
+
+
+.coleccion h2{
+
+color:#ffd600;
+
+}
+
+
+
+.coleccion p{
+
+color:#ddd;
+
+}
+
+
+
+.stats-coleccion{
+
+background:#222;
+
+border-radius:15px;
+
+padding:15px;
+
+margin:20px 0;
+
+}
+
+
+
+.numero{
+
+color:#00e676;
+
+font-size:25px;
+
+font-weight:bold;
+
+}
+
+
+
+.coleccion a{
+
+display:inline-block;
+
+background:#ffd600;
+
+color:black;
+
+padding:12px 25px;
+
+border-radius:25px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+@media(max-width:1000px){
+
+
+.colecciones-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.colecciones-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<img src="img/logo/RemaCards_logo_Wallapop.jpg" class="logo">
+
+
+<h1>
+RemaCards
+</h1>
+
+
+<p>
+La casa del coleccionista
+</p>
+
+
+
+<nav class="menu">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="colecciones.html">
+Colecciones
+</a>
+
+
+<a href="index.html#catalogo">
+Cartas
+</a>
+
+
+<a href="contacto.html">
+Contacto
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+
+<section class="hero">
+
+
+<h2>
+🏆 Colecciones
+</h2>
+
+
+<p>
+Explora nuestras colecciones de cartas de fútbol
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<div class="colecciones-container">
+
+
+
+
+
+<div class="coleccion">
+
+
+<img src="img/colecciones/topps.png">
+
+
+<h2>
+🔥 Topps
+</h2>
+
+
+<p>
+Chrome, Match Attax y cartas especiales.
+</p>
+
+
+<div class="stats-coleccion">
+
+Cartas disponibles:
+
+<br>
+
+<span class="numero" id="topps">
+0
+</span>
+
+</div>
+
+
+
+<a href="index.html?coleccion=Topps">
+
+Ver cartas
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="coleccion">
+
+
+<img src="img/colecciones/megacracks.png">
+
+
+<h2>
+⭐ MegaCracks
+</h2>
+
+
+<p>
+Colecciones clásicas y actuales.
+</p>
+
+
+<div class="stats-coleccion">
+
+Cartas disponibles:
+
+<br>
+
+<span class="numero" id="mega">
+0
+</span>
+
+</div>
+
+
+<a href="index.html?coleccion=MegaCracks">
+
+Ver cartas
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="coleccion">
+
+
+<img src="img/colecciones/adrenalyn.png">
+
+
+<h2>
+⚡ Adrenalyn XL
+</h2>
+
+
+<p>
+Panini, especiales y limitadas.
+</p>
+
+
+<div class="stats-coleccion">
+
+Cartas disponibles:
+
+<br>
+
+<span class="numero" id="adrenalyn">
+0
+</span>
+
+</div>
+
+
+
+<a href="index.html?coleccion=Adrenalyn XL">
+
+Ver cartas
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="coleccion">
+
+
+<img src="img/colecciones/daka.png">
+
+
+<h2>
+🏅 DAKA
+</h2>
+
+
+<p>
+Cartas premium para coleccionistas.
+</p>
+
+
+<div class="stats-coleccion">
+
+Cartas disponibles:
+
+<br>
+
+<span class="numero" id="daka">
+0
+</span>
+
+</div>
+
+
+<a href="index.html?coleccion=DAKA">
+
+Ver cartas
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<h2>
+RemaCards
+</h2>
+
+
+<p>
+🃏 La casa del coleccionista
+</p>
+
+
+
+<div class="footer-links">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<a href="colecciones.html">
+Colecciones
+</a>
+
+
+<a href="contacto.html">
+Contacto
+</a>
+
+
+<a href="privacidad.html">
+Privacidad
+</a>
+
+
+<a href="terminos.html">
+Términos
+</a>
+
+
+
+</div>
+
+
+
+<p class="copy">
+
+© 2026 RemaCards
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+fetch("data/cartas.json")
+
+.then(res=>res.json())
+
+.then(cartas=>{
+
+
+topps.innerHTML =
+cartas.filter(c=>
+c.coleccion.includes("Topps") &&
+c.estado==="Disponible"
+).length;
+
+
+
+mega.innerHTML =
+cartas.filter(c=>
+c.coleccion.includes("MegaCracks") &&
+c.estado==="Disponible"
+).length;
+
+
+
+adrenalyn.innerHTML =
+cartas.filter(c=>
+c.coleccion.includes("Adrenalyn") &&
+c.estado==="Disponible"
+).length;
+
+
+
+daka.innerHTML =
+cartas.filter(c=>
+c.coleccion.includes("DAKA") &&
+c.estado==="Disponible"
+).length;
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "remacards",
+  "version": "1.0.0",
+  "description": "RemaCards - La casa del coleccionista de cartas de futbol",
+  "main": "server.js",
+
+  "scripts": {
+    "start": "node server.js"
+  },
+
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.0"
+  }
+}
