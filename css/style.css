@@ -41,41 +41,20 @@ z-index:1000;
 
 
 .header-inner{
-
 max-width:1400px;
-
-margin:auto;
-
-padding:18px 40px;
-
+margin:0 auto;
+padding:18px 35px;
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
 }
 
 
-.logo{
-
-font-size:28px;
-
-font-weight:900;
-
-letter-spacing:-1px;
-
-color:white;
-
+.logo img{
+width:150px;
+height:auto;
+display:block;
 }
-
-
-.logo span{
-
-color:#ffd600;
-
-}
-
 
 
 nav{
