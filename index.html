@@ -8,11 +8,181 @@
 
 <title>RemaCards - La casa del coleccionista</title>
 
-<link rel="icon" href="img/logo/favicon.png">
-
 <link rel="stylesheet" href="css/style.css">
 
+
+<style>
+
+body{
+margin:0;
+background:#050505;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+header{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 60px;
+border-bottom:1px solid #ffd900;
+
+}
+
+
+.logo{
+
+width:90px;
+border-radius:10px;
+
+}
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+
+}
+
+
+nav a:hover{
+
+color:#ffd900;
+
+}
+
+
+
+.hero{
+
+text-align:center;
+padding:80px 20px;
+
+}
+
+
+.hero h1{
+
+font-size:55px;
+color:#ffd900;
+margin-bottom:10px;
+
+}
+
+
+.hero p{
+
+font-size:22px;
+color:#ddd;
+
+}
+
+
+.boton{
+
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#ffd900;
+color:black;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+
+}
+
+
+
+.seccion{
+
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+
+}
+
+
+.titulo{
+
+text-align:center;
+font-size:35px;
+color:#ffd900;
+margin-bottom:40px;
+
+}
+
+
+
+.tarjetas{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+
+
+.caja{
+
+background:#111;
+border-radius:20px;
+padding:25px;
+text-align:center;
+border:2px solid #222;
+transition:.3s;
+
+}
+
+
+.caja:hover{
+
+transform:translateY(-10px);
+border-color:#ffd900;
+box-shadow:0 0 25px #ffd900;
+
+}
+
+
+
+.caja img{
+
+width:150px;
+height:150px;
+object-fit:contain;
+
+}
+
+
+
+.caja h2{
+
+color:#ffd900;
+
+}
+
+
+
+footer{
+
+margin-top:50px;
+padding:30px;
+text-align:center;
+border-top:1px solid #ffd900;
+color:#aaa;
+
+}
+
+
+</style>
+
 </head>
+
 
 
 <body>
@@ -20,38 +190,19 @@
 
 <header>
 
+
 <img src="img/logo/RemaCards_logo_Wallapop.jpg" class="logo">
 
 
-<h1>RemaCards</h1>
+<nav>
 
-<p>
-La casa del coleccionista
-</p>
+<a href="index.html">Inicio</a>
 
+<a href="colecciones.html">Colecciones</a>
 
+<a href="cartas.html">Cartas</a>
 
-<nav class="menu">
-
-<a href="index.html">
-Inicio
-</a>
-
-
-<a href="colecciones.html">
-Colecciones
-</a>
-
-
-<a href="index.html#catalogo">
-Cartas
-</a>
-
-
-<a href="contacto.html">
-Contacto
-</a>
-
+<a href="contacto.html">Contacto</a>
 
 </nav>
 
@@ -60,28 +211,22 @@ Contacto
 
 
 
-
-
 <section class="hero">
 
 
-<h2>
-🔥 Cartas únicas para coleccionistas
-</h2>
-
+<h1>🔥 RemaCards</h1>
 
 <p>
-Encuentra cartas de fútbol, ediciones especiales y piezas únicas.
+Tu tienda de cartas de fútbol para coleccionistas
+</p>
+
+<p>
+MegaCracks • Adrenalyn XL • Topps • DAKA
 </p>
 
 
-<p>
-Topps · MegaCracks · Adrenalyn XL · DAKA
-</p>
-
-
-<a href="#catalogo" class="boton">
-🃏 Ver catálogo
+<a class="boton" href="colecciones.html">
+Ver catálogo
 </a>
 
 
@@ -90,115 +235,155 @@ Topps · MegaCracks · Adrenalyn XL · DAKA
 
 
 
+<section class="seccion">
+
+
+<h2 class="titulo">
+⭐ Colecciones destacadas
+</h2>
 
 
 
-
-<section class="info-home">
-
-
-<div class="info-box">
-
-📦
-
-<strong id="homeTotal">
-0
-</strong>
-
-Cartas
-
-</div>
+<div class="tarjetas">
 
 
+<div class="caja">
 
-<div class="info-box">
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
 
-✅
+<h2>MegaCracks</h2>
 
-<strong id="homeDisp">
-0
-</strong>
+<p>
+LaLiga oficial Panini
+</p>
 
-Disponibles
+<a class="boton" href="megacracks2627.html">
+Ver colección
+</a>
 
 </div>
 
 
 
-<div class="info-box">
+<div class="caja">
 
-🏆
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
 
-<strong id="homeColecciones">
-0
-</strong>
+<h2>Adrenalyn XL</h2>
 
-Colecciones
+<p>
+Cartas y ediciones especiales
+</p>
+
+<a class="boton" href="colecciones.html">
+Ver colección
+</a>
 
 </div>
 
+
+
+
+<div class="caja">
+
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+
+<h2>Topps</h2>
+
+<p>
+Chrome, Match Attax y más
+</p>
+
+<a class="boton" href="colecciones.html">
+Ver colección
+</a>
+
+</div>
+
+
+
+
+<div class="caja">
+
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+
+<h2>DAKA</h2>
+
+<p>
+Cartas premium
+</p>
+
+<a class="boton" href="colecciones.html">
+Ver colección
+</a>
+
+</div>
+
+
+</div>
 
 
 </section>
 
 
 
+<section class="seccion">
 
 
+<h2 class="titulo">
+🔥 Últimas cartas añadidas
+</h2>
 
 
+<div class="tarjetas">
 
 
-<section class="herramientas">
+<div class="caja">
+
+<h2>Vinicius Jr</h2>
+
+<p>
+MegaCracks 26/27
+</p>
+
+<p>
+🟢 Disponible
+</p>
+
+</div>
 
 
-<input 
+<div class="caja">
 
-id="busqueda"
+<h2>Lamine Yamal</h2>
 
-placeholder="🔎 Buscar jugador, equipo o colección..."
-
->
-
-
-
-
-<div class="filtros">
-
-
-<button onclick="filtrarCartas('Todas')">
-
-Todas
-
-</button>
-
-
-
-<button onclick="filtrarCartas('Adrenalyn XL')">
-
+<p>
 Adrenalyn XL
+</p>
 
-</button>
+<p>
+🟢 Disponible
+</p>
 
-
-
-<button onclick="filtrarCartas('MegaCracks')">
-
-MegaCracks
-
-</button>
+</div>
 
 
+<div class="caja">
 
-<button onclick="filtrarCartas('Topps')">
+<h2>Mbappé</h2>
 
+<p>
 Topps
+</p>
 
-</button>
-
+<p>
+🟢 Disponible
+</p>
 
 </div>
 
+
+</div>
 
 
 </section>
@@ -206,180 +391,13 @@ Topps
 
 
 
+<footer>
 
+<h2>RemaCards</h2>
 
-
-
-<section class="destacadas">
-
-
-<h2>
-⭐ Cartas destacadas
-</h2>
-
-
-
-<div id="destacadas">
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="catalogo" id="catalogo">
-
-
-<h2>
-🃏 Catálogo RemaCards
-</h2>
-
-
-<p>
-Todas nuestras cartas disponibles
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<main>
-
-
-<div id="resultados">
-
-</div>
-
-
-</main>
-
-
-
-
-
-
-
-
-
-<footer class="footer">
-
-
-<h2>
-RemaCards
-</h2>
-
-
-<p>
-🃏 La casa del coleccionista
-</p>
-
-
-
-<div class="footer-links">
-
-
-<a href="index.html">
-Inicio
-</a>
-
-
-<a href="colecciones.html">
-Colecciones
-</a>
-
-
-<a href="contacto.html">
-Contacto
-</a>
-
-
-<a href="privacidad.html">
-Privacidad
-</a>
-
-
-<a href="terminos.html">
-Términos
-</a>
-
-
-
-</div>
-
-
-
-
-<p>
-Cartas de fútbol | Topps | Panini | MegaCracks
-</p>
-
-
-
-<p class="copy">
-
-© 2026 RemaCards
-
-</p>
-
-
+<p>La casa del coleccionista 🃏</p>
 
 </footer>
-
-
-
-
-
-
-
-
-
-<script src="js/app.js"></script>
-
-
-
-<script>
-
-
-fetch("data/cartas.json")
-
-.then(res=>res.json())
-
-.then(cartas=>{
-
-
-document.getElementById("homeTotal").innerHTML =
-cartas.length;
-
-
-
-document.getElementById("homeDisp").innerHTML =
-cartas.filter(c=>c.estado==="Disponible").length;
-
-
-
-document.getElementById("homeColecciones").innerHTML =
-[...new Set(cartas.map(c=>c.coleccion))].length;
-
-
-
-});
-
-
-</script>
-
-
 
 
 
