@@ -3,16 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RemaFanCards | Cartas Adrenalyn XL</title>
+<title>RemaFanCards | Cartas Adrenalyn XL Oficiales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
+  * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background: #0a0a0a;
     color: #fff;
@@ -20,175 +15,254 @@
     line-height: 1.5;
   }
 
-  /* HEADER */
+  /* ===== HEADER ===== */
   header {
     background: #000;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #1a1a1a;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
   }
-
-  .header-top {
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 14px 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 30px;
-    max-width: 1400px;
-    margin: 0 auto;
   }
-
   .logo {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
-
-  .logo span {
-    color: #00ff88;
-  }
+  .logo span { color: #00ff88; }
 
   nav {
     display: flex;
-    gap: 28px;
+    gap: 26px;
   }
-
   nav a {
-    color: #ccc;
+    color: #bbb;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 600;
+    letter-spacing: 0.3px;
     transition: color 0.2s;
   }
+  nav a:hover, nav a.active { color: #fff; }
 
-  nav a:hover, nav a.active {
-    color: #fff;
-  }
-
-  .header-icons {
+  .icons {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 20px;
   }
-
-  .header-icons svg {
-    width: 22px;
-    height: 22px;
+  .icons svg {
+    width: 21px;
+    height: 21px;
     cursor: pointer;
-    opacity: 0.85;
+    opacity: 0.9;
   }
-
+  .cart-wrap { position: relative; }
   .cart-count {
+    position: absolute;
+    top: -7px;
+    right: -9px;
     background: #00ff88;
     color: #000;
     font-size: 11px;
     font-weight: 700;
-    border-radius: 50%;
     width: 18px;
     height: 18px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: -6px;
-    right: -8px;
   }
 
-  /* HERO */
+  /* ===== HERO ===== */
   .hero {
     text-align: center;
-    padding: 50px 20px 30px;
+    padding: 48px 20px 20px;
   }
-
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
-
-  .hero h1 span {
-    color: #00ff88;
-  }
-
+  .hero h1 span { color: #00ff88; }
   .hero p {
-    color: #aaa;
+    color: #999;
     margin-top: 8px;
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
-  /* GRID COLECCIONES */
+  /* ===== COLECCIONES ===== */
   .collections {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 30px 60px;
+    padding: 20px 28px 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 26px;
   }
-
-  .card {
+  .col-card {
     background: #111;
     border-radius: 12px;
     overflow: hidden;
-    border: 2px solid;
+    border: 2.5px solid;
     transition: transform 0.25s, box-shadow 0.25s;
     cursor: pointer;
   }
-
-  .card:hover {
-    transform: translateY(-6px);
-  }
-
-  .card img {
+  .col-card:hover { transform: translateY(-7px); }
+  .col-card img {
     width: 100%;
-    height: 260px;
+    height: 255px;
     object-fit: cover;
     display: block;
   }
-
-  .card-info {
-    padding: 14px;
+  .col-info {
+    padding: 13px 10px;
     text-align: center;
   }
-
-  .card-info h3 {
-    font-size: 16px;
+  .col-info h3 {
+    font-size: 15.5px;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
-
-  .card-info a {
+  .col-info a {
     color: #00ff88;
-    font-size: 13px;
+    font-size: 12.5px;
     text-decoration: none;
     font-weight: 600;
   }
 
-  /* COLORES NEÓN */
-  .c1 { border-color: #00ff88; box-shadow: 0 0 15px rgba(0,255,136,0.3); }
-  .c2 { border-color: #00bfff; box-shadow: 0 0 15px rgba(0,191,255,0.3); }
-  .c3 { border-color: #ff2d55; box-shadow: 0 0 15px rgba(255,45,85,0.3); }
-  .c4 { border-color: #ffcc00; box-shadow: 0 0 15px rgba(255,204,0,0.3); }
-  .c5 { border-color: #bf5af2; box-shadow: 0 0 15px rgba(191,90,242,0.3); }
-  .c6 { border-color: #5ac8fa; box-shadow: 0 0 15px rgba(90,200,250,0.3); }
-  .c7 { border-color: #ff9f0a; box-shadow: 0 0 15px rgba(255,159,10,0.3); }
-  .c8 { border-color: #30d158; box-shadow: 0 0 15px rgba(48,209,88,0.3); }
-  .c9 { border-color: #64d2ff; box-shadow: 0 0 15px rgba(100,210,255,0.3); }
-  .c10 { border-color: #ff375f; box-shadow: 0 0 15px rgba(255,55,95,0.3); }
-  .c11 { border-color: #bf5af2; box-shadow: 0 0 15px rgba(191,90,242,0.3); }
-  .c12 { border-color: #00c7be; box-shadow: 0 0 15px rgba(0,199,190,0.3); }
-  .c13 { border-color: #ff453a; box-shadow: 0 0 15px rgba(255,69,58,0.3); }
-  .c14 { border-color: #0a84ff; box-shadow: 0 0 15px rgba(10,132,255,0.3); }
-  .c15 { border-color: #30d158; box-shadow: 0 0 15px rgba(48,209,88,0.3); }
+  /* Colores neón exactos estilo PMACA */
+  .n1 { border-color: #00ff88; box-shadow: 0 0 18px rgba(0,255,136,0.35); }
+  .n2 { border-color: #00bfff; box-shadow: 0 0 18px rgba(0,191,255,0.35); }
+  .n3 { border-color: #ff2d55; box-shadow: 0 0 18px rgba(255,45,85,0.35); }
+  .n4 { border-color: #ffcc00; box-shadow: 0 0 18px rgba(255,204,0,0.35); }
+  .n5 { border-color: #bf5af2; box-shadow: 0 0 18px rgba(191,90,242,0.35); }
+  .n6 { border-color: #5ac8fa; box-shadow: 0 0 18px rgba(90,200,250,0.35); }
+  .n7 { border-color: #ff9f0a; box-shadow: 0 0 18px rgba(255,159,10,0.35); }
+  .n8 { border-color: #30d158; box-shadow: 0 0 18px rgba(48,209,88,0.35); }
+  .n9 { border-color: #64d2ff; box-shadow: 0 0 18px rgba(100,210,255,0.35); }
+  .n10{ border-color: #ff375f; box-shadow: 0 0 18px rgba(255,55,95,0.35); }
+  .n11{ border-color: #bf5af2; box-shadow: 0 0 18px rgba(191,90,242,0.35); }
+  .n12{ border-color: #00c7be; box-shadow: 0 0 18px rgba(0,199,190,0.35); }
+  .n13{ border-color: #ff453a; box-shadow: 0 0 18px rgba(255,69,58,0.35); }
+  .n14{ border-color: #0a84ff; box-shadow: 0 0 18px rgba(10,132,255,0.35); }
+  .n15{ border-color: #30d158; box-shadow: 0 0 18px rgba(48,209,88,0.35); }
+  .n16{ border-color: #00bfff; box-shadow: 0 0 18px rgba(0,191,255,0.35); }
+  .n17{ border-color: #00ff88; box-shadow: 0 0 18px rgba(0,255,136,0.35); }
 
-  /* FOOTER */
+  .badge-nuevo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #00ff88;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* ===== MIS CARTAS ===== */
+  .mis-cartas {
+    max-width: 1400px;
+    margin: 10px auto 60px;
+    padding: 0 28px;
+  }
+  .mis-cartas h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .mis-cartas .sub {
+    text-align: center;
+    color: #888;
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+
+  /* Filtros */
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .filtro-btn {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filtro-btn:hover, .filtro-btn.active {
+    background: #00ff88;
+    color: #000;
+    border-color: #00ff88;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 24px;
+  }
+  .producto {
+    background: #151515;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s;
+  }
+  .producto:hover { transform: translateY(-4px); }
+  .producto img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+  .prod-info { padding: 14px; }
+  .prod-info h3 {
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    min-height: 40px;
+  }
+  .precio {
+    color: #00ff88;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .btn-add {
+    background: #00ff88;
+    color: #000;
+    border: none;
+    width: 100%;
+    padding: 11px;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-add:hover { background: #00cc6a; }
+
+  /* ===== FOOTER ===== */
   footer {
     background: #111;
     border-top: 1px solid #222;
-    padding: 25px 30px;
+    padding: 28px 20px;
   }
-
-  .footer-content {
+  .footer-grid {
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
@@ -196,97 +270,28 @@
     gap: 20px;
     text-align: center;
   }
-
-  .footer-item {
+  .f-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
   }
-
-  .footer-item svg {
-    width: 28px;
-    height: 28px;
+  .f-item svg {
+    width: 26px;
+    height: 26px;
     color: #00ff88;
   }
+  .f-item strong { font-size: 13px; }
+  .f-item span { font-size: 12px; color: #777; }
 
-  .footer-item strong {
-    font-size: 13px;
-  }
-
-  .footer-item span {
-    font-size: 12px;
-    color: #888;
-  }
-
-  /* SECCIÓN MIS CARTAS (ejemplo) */
-  .mis-cartas {
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 30px;
-  }
-
-  .mis-cartas h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 25px;
-  }
-
-  .producto {
-    background: #151515;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #333;
-  }
-
-  .producto img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-  }
-
-  .producto-info {
-    padding: 15px;
-  }
-
-  .producto-info h3 {
-    font-size: 15px;
-    margin-bottom: 6px;
-  }
-
-  .precio {
-    color: #00ff88;
-    font-weight: 700;
-    font-size: 18px;
-  }
-
-  .btn-añadir {
-    background: #00ff88;
-    color: #000;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    margin-top: 12px;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-
-  .btn-añadir:hover {
-    background: #00cc6a;
-  }
-
-  @media (max-width: 768px) {
+  /* Responsive */
+  @media (max-width: 900px) {
     nav { display: none; }
-    .collections { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-    .footer-content { grid-template-columns: 1fr 1fr; }
+    .collections { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 500px) {
+    .collections { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -294,24 +299,22 @@
 
 <!-- HEADER -->
 <header>
-  <div class="header-top">
+  <div class="header-inner">
     <div class="logo">REMA<span>FAN</span>CARDS</div>
-    
     <nav>
       <a href="#" class="active">INICIO</a>
       <a href="#">ÁLBUM VIRTUAL</a>
-      <a href="#">COLECCIONES ▾</a>
+      <a href="#colecciones">COLECCIONES ▾</a>
       <a href="#mis-cartas">MIS CARTAS</a>
       <a href="#">NOVEDADES</a>
       <a href="#">CONTACTO</a>
     </nav>
-
-    <div class="header-icons">
+    <div class="icons">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-      <div style="position:relative">
+      <div class="cart-wrap">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-        <div class="cart-count" id="cart-count">0</div>
+        <div class="cart-count" id="cartCount">0</div>
       </div>
     </div>
   </div>
@@ -323,216 +326,79 @@
   <p>Explora todas las colecciones de Adrenalyn XL desde 2009 hasta la actualidad</p>
 </section>
 
-<!-- GRID DE COLECCIONES -->
-<section class="collections">
-  <!-- 2009-10 -->
-  <div class="card c1">
-    <img src="https://via.placeholder.com/300x400/111/00ff88?text=2009-10" alt="2009-10">
-    <div class="card-info">
-      <h3>2009-10</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2010-11 -->
-  <div class="card c2">
-    <img src="https://via.placeholder.com/300x400/111/00bfff?text=2010-11" alt="2010-11">
-    <div class="card-info">
-      <h3>2010-11</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2011-12 -->
-  <div class="card c3">
-    <img src="https://via.placeholder.com/300x400/111/ff2d55?text=2011-12" alt="2011-12">
-    <div class="card-info">
-      <h3>2011-12</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2012-13 -->
-  <div class="card c4">
-    <img src="https://via.placeholder.com/300x400/111/ffcc00?text=2012-13" alt="2012-13">
-    <div class="card-info">
-      <h3>2012-13</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2013-14 -->
-  <div class="card c5">
-    <img src="https://via.placeholder.com/300x400/111/bf5af2?text=2013-14" alt="2013-14">
-    <div class="card-info">
-      <h3>2013-14</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2014-15 -->
-  <div class="card c6">
-    <img src="https://via.placeholder.com/300x400/111/5ac8fa?text=2014-15" alt="2014-15">
-    <div class="card-info">
-      <h3>2014-15</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2015-16 -->
-  <div class="card c7">
-    <img src="https://via.placeholder.com/300x400/111/ff9f0a?text=2015-16" alt="2015-16">
-    <div class="card-info">
-      <h3>2015-16</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2016-17 -->
-  <div class="card c8">
-    <img src="https://via.placeholder.com/300x400/111/30d158?text=2016-17" alt="2016-17">
-    <div class="card-info">
-      <h3>2016-17</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2017-18 -->
-  <div class="card c9">
-    <img src="https://via.placeholder.com/300x400/111/64d2ff?text=2017-18" alt="2017-18">
-    <div class="card-info">
-      <h3>2017-18</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2018-19 -->
-  <div class="card c10">
-    <img src="https://via.placeholder.com/300x400/111/ff375f?text=2018-19" alt="2018-19">
-    <div class="card-info">
-      <h3>2018-19</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2019-20 -->
-  <div class="card c11">
-    <img src="https://via.placeholder.com/300x400/111/bf5af2?text=2019-20" alt="2019-20">
-    <div class="card-info">
-      <h3>2019-20</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2020-21 -->
-  <div class="card c12">
-    <img src="https://via.placeholder.com/300x400/111/00c7be?text=2020-21" alt="2020-21">
-    <div class="card-info">
-      <h3>2020-21</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2021-22 -->
-  <div class="card c13">
-    <img src="https://via.placeholder.com/300x400/111/ff453a?text=2021-22" alt="2021-22">
-    <div class="card-info">
-      <h3>2021-22</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2022-23 -->
-  <div class="card c14">
-    <img src="https://via.placeholder.com/300x400/111/0a84ff?text=2022-23" alt="2022-23">
-    <div class="card-info">
-      <h3>2022-23</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2023-24 -->
-  <div class="card c15">
-    <img src="https://via.placeholder.com/300x400/111/30d158?text=2023-24" alt="2023-24">
-    <div class="card-info">
-      <h3>2023-24</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2024-25 -->
-  <div class="card c2">
-    <img src="https://via.placeholder.com/300x400/111/00bfff?text=2024-25" alt="2024-25">
-    <div class="card-info">
-      <h3>2024-25</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
-  </div>
-
-  <!-- 2025-26 NUEVO -->
-  <div class="card c1" style="position:relative">
-    <div style="position:absolute;top:10px;right:10px;background:#00ff88;color:#000;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;">NUEVO</div>
-    <img src="https://via.placeholder.com/300x400/111/00ff88?text=2025-26" alt="2025-26">
-    <div class="card-info">
-      <h3>2025-26</h3>
-      <a href="#">VER COLECCIÓN →</a>
-    </div>
+<!-- COLECCIONES -->
+<section class="collections" id="colecciones">
+  <div class="col-card n1"><img src="https://via.placeholder.com/300x400/0a0a0a/00ff88?text=2009-10" alt="2009-10"><div class="col-info"><h3>2009-10</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n2"><img src="https://via.placeholder.com/300x400/0a0a0a/00bfff?text=2010-11" alt="2010-11"><div class="col-info"><h3>2010-11</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n3"><img src="https://via.placeholder.com/300x400/0a0a0a/ff2d55?text=2011-12" alt="2011-12"><div class="col-info"><h3>2011-12</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n4"><img src="https://via.placeholder.com/300x400/0a0a0a/ffcc00?text=2012-13" alt="2012-13"><div class="col-info"><h3>2012-13</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n5"><img src="https://via.placeholder.com/300x400/0a0a0a/bf5af2?text=2013-14" alt="2013-14"><div class="col-info"><h3>2013-14</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n6"><img src="https://via.placeholder.com/300x400/0a0a0a/5ac8fa?text=2014-15" alt="2014-15"><div class="col-info"><h3>2014-15</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n7"><img src="https://via.placeholder.com/300x400/0a0a0a/ff9f0a?text=2015-16" alt="2015-16"><div class="col-info"><h3>2015-16</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n8"><img src="https://via.placeholder.com/300x400/0a0a0a/30d158?text=2016-17" alt="2016-17"><div class="col-info"><h3>2016-17</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n9"><img src="https://via.placeholder.com/300x400/0a0a0a/64d2ff?text=2017-18" alt="2017-18"><div class="col-info"><h3>2017-18</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n10"><img src="https://via.placeholder.com/300x400/0a0a0a/ff375f?text=2018-19" alt="2018-19"><div class="col-info"><h3>2018-19</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n11"><img src="https://via.placeholder.com/300x400/0a0a0a/bf5af2?text=2019-20" alt="2019-20"><div class="col-info"><h3>2019-20</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n12"><img src="https://via.placeholder.com/300x400/0a0a0a/00c7be?text=2020-21" alt="2020-21"><div class="col-info"><h3>2020-21</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n13"><img src="https://via.placeholder.com/300x400/0a0a0a/ff453a?text=2021-22" alt="2021-22"><div class="col-info"><h3>2021-22</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n14"><img src="https://via.placeholder.com/300x400/0a0a0a/0a84ff?text=2022-23" alt="2022-23"><div class="col-info"><h3>2022-23</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n15"><img src="https://via.placeholder.com/300x400/0a0a0a/30d158?text=2023-24" alt="2023-24"><div class="col-info"><h3>2023-24</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n16"><img src="https://via.placeholder.com/300x400/0a0a0a/00bfff?text=2024-25" alt="2024-25"><div class="col-info"><h3>2024-25</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n17" style="position:relative">
+    <div class="badge-nuevo">NUEVO</div>
+    <img src="https://via.placeholder.com/300x400/0a0a0a/00ff88?text=2025-26" alt="2025-26">
+    <div class="col-info"><h3>2025-26</h3><a href="#">VER COLECCIÓN →</a></div>
   </div>
 </section>
 
-<!-- MIS CARTAS (aquí pondremos tus cartas reales) -->
+<!-- MIS CARTAS -->
 <section class="mis-cartas" id="mis-cartas">
   <h2>MIS CARTAS DISPONIBLES</h2>
-  <div class="productos" id="productos">
-    <!-- Ejemplo de producto (los cambiaremos por los tuyos) -->
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400/222/fff?text=Messi+2010" alt="Messi">
-      <div class="producto-info">
-        <h3>Messi 2010-11 Oro</h3>
-        <div class="precio">18 €</div>
-        <button class="btn-añadir" onclick="añadirAlCarrito()">Añadir al carrito</button>
-      </div>
-    </div>
+  <p class="sub">Más de 200 cartas originales Panini Adrenalyn XL a la venta</p>
 
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400/222/fff?text=Cristiano+2012" alt="Cristiano">
-      <div class="producto-info">
-        <h3>Cristiano Ronaldo 2012-13</h3>
-        <div class="precio">15 €</div>
-        <button class="btn-añadir" onclick="añadirAlCarrito()">Añadir al carrito</button>
-      </div>
-    </div>
-
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x400/222/fff?text=Neymar+2015" alt="Neymar">
-      <div class="producto-info">
-        <h3>Neymar 2015-16</h3>
-        <div class="precio">12 €</div>
-        <button class="btn-añadir" onclick="añadirAlCarrito()">Añadir al carrito</button>
-      </div>
-    </div>
+  <div class="filtros" id="filtros">
+    <button class="filtro-btn active" onclick="filtrar('todas')">Todas</button>
+    <button class="filtro-btn" onclick="filtrar('2009-10')">2009-10</button>
+    <button class="filtro-btn" onclick="filtrar('2010-11')">2010-11</button>
+    <button class="filtro-btn" onclick="filtrar('2011-12')">2011-12</button>
+    <button class="filtro-btn" onclick="filtrar('2012-13')">2012-13</button>
+    <button class="filtro-btn" onclick="filtrar('2013-14')">2013-14</button>
+    <button class="filtro-btn" onclick="filtrar('2014-15')">2014-15</button>
+    <button class="filtro-btn" onclick="filtrar('2015-16')">2015-16</button>
+    <button class="filtro-btn" onclick="filtrar('2016-17')">2016-17</button>
+    <button class="filtro-btn" onclick="filtrar('2017-18')">2017-18</button>
+    <button class="filtro-btn" onclick="filtrar('2018-19')">2018-19</button>
+    <button class="filtro-btn" onclick="filtrar('2019-20')">2019-20</button>
+    <button class="filtro-btn" onclick="filtrar('2020-21')">2020-21</button>
+    <button class="filtro-btn" onclick="filtrar('2021-22')">2021-22</button>
+    <button class="filtro-btn" onclick="filtrar('2022-23')">2022-23</button>
+    <button class="filtro-btn" onclick="filtrar('2023-24')">2023-24</button>
+    <button class="filtro-btn" onclick="filtrar('2024-25')">2024-25</button>
+    <button class="filtro-btn" onclick="filtrar('2025-26')">2025-26</button>
   </div>
+
+  <div class="productos" id="productos"></div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-content">
-    <div class="footer-item">
+  <div class="footer-grid">
+    <div class="f-item">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
       <strong>COMPRA SEGURA</strong>
       <span>Pago 100% seguro</span>
     </div>
-    <div class="footer-item">
+    <div class="f-item">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
       <strong>ENVÍOS RÁPIDOS</strong>
       <span>24/48h a toda España</span>
     </div>
-    <div class="footer-item">
+    <div class="f-item">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
       <strong>PRODUCTOS OFICIALES</strong>
       <span>Cartas originales Panini</span>
     </div>
-    <div class="footer-item">
+    <div class="f-item">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
       <strong>ATENCIÓN AL CLIENTE</strong>
       <span>Te ayudamos en lo que necesites</span>
@@ -541,13 +407,429 @@
 </footer>
 
 <script>
-  let carrito = 0;
-  function añadirAlCarrito() {
-    carrito++;
-    document.getElementById('cart-count').textContent = carrito;
-    alert('¡Carta añadida al carrito!');
+  // ============================================
+  // AQUÍ PON TODAS TUS CARTAS (fácil de editar)
+  // ============================================
+  const cartas = [
+    // Ejemplos - borra estos y pon las tuyas
+    { nombre: "Messi 2010-11 Oro", precio: 18, foto: "https://via.placeholder.com/300x400/222/fff?text=Messi+2010", temporada: "2010-11" },
+    { nombre: "Cristiano Ronaldo 2012-13", precio: 15, foto: "https://via.placeholder.com/300x400/222/fff?text=CR7+2012", temporada: "2012-13" },
+    { nombre: "Neymar 2015-16", precio: 12, foto: "https://via.placeholder.com/300x400/222/fff?text=Neymar+2015", temporada: "2015-16" },
+    { nombre: "Iniesta 2009-10", precio: 9, foto: "https://via.placeholder.com/300x400/222/fff?text=Iniesta+2009", temporada: "200<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RemaFanCards | Cartas Adrenalyn XL Oficiales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
   }
-</script>
 
-</body>
-</html>
+  /* ===== HEADER ===== */
+  header {
+    background: #000;
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: #00ff88; }
+
+  nav {
+    display: flex;
+    gap: 26px;
+  }
+  nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+  nav a:hover, nav a.active { color: #fff; }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .icons svg {
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  .cart-wrap { position: relative; }
+  .cart-count {
+    position: absolute;
+    top: -7px;
+    right: -9px;
+    background: #00ff88;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    text-align: center;
+    padding: 48px 20px 20px;
+  }
+  .hero h1 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  .hero h1 span { color: #00ff88; }
+  .hero p {
+    color: #999;
+    margin-top: 8px;
+    font-size: 14.5px;
+  }
+
+  /* ===== COLECCIONES ===== */
+  .collections {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 28px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 26px;
+  }
+  .col-card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2.5px solid;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+  }
+  .col-card:hover { transform: translateY(-7px); }
+  .col-card img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    display: block;
+  }
+  .col-info {
+    padding: 13px 10px;
+    text-align: center;
+  }
+  .col-info h3 {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .col-info a {
+    color: #00ff88;
+    font-size: 12.5px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Colores neón exactos estilo PMACA */
+  .n1 { border-color: #00ff88; box-shadow: 0 0 18px rgba(0,255,136,0.35); }
+  .n2 { border-color: #00bfff; box-shadow: 0 0 18px rgba(0,191,255,0.35); }
+  .n3 { border-color: #ff2d55; box-shadow: 0 0 18px rgba(255,45,85,0.35); }
+  .n4 { border-color: #ffcc00; box-shadow: 0 0 18px rgba(255,204,0,0.35); }
+  .n5 { border-color: #bf5af2; box-shadow: 0 0 18px rgba(191,90,242,0.35); }
+  .n6 { border-color: #5ac8fa; box-shadow: 0 0 18px rgba(90,200,250,0.35); }
+  .n7 { border-color: #ff9f0a; box-shadow: 0 0 18px rgba(255,159,10,0.35); }
+  .n8 { border-color: #30d158; box-shadow: 0 0 18px rgba(48,209,88,0.35); }
+  .n9 { border-color: #64d2ff; box-shadow: 0 0 18px rgba(100,210,255,0.35); }
+  .n10{ border-color: #ff375f; box-shadow: 0 0 18px rgba(255,55,95,0.35); }
+  .n11{ border-color: #bf5af2; box-shadow: 0 0 18px rgba(191,90,242,0.35); }
+  .n12{ border-color: #00c7be; box-shadow: 0 0 18px rgba(0,199,190,0.35); }
+  .n13{ border-color: #ff453a; box-shadow: 0 0 18px rgba(255,69,58,0.35); }
+  .n14{ border-color: #0a84ff; box-shadow: 0 0 18px rgba(10,132,255,0.35); }
+  .n15{ border-color: #30d158; box-shadow: 0 0 18px rgba(48,209,88,0.35); }
+  .n16{ border-color: #00bfff; box-shadow: 0 0 18px rgba(0,191,255,0.35); }
+  .n17{ border-color: #00ff88; box-shadow: 0 0 18px rgba(0,255,136,0.35); }
+
+  .badge-nuevo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #00ff88;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* ===== MIS CARTAS ===== */
+  .mis-cartas {
+    max-width: 1400px;
+    margin: 10px auto 60px;
+    padding: 0 28px;
+  }
+  .mis-cartas h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .mis-cartas .sub {
+    text-align: center;
+    color: #888;
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+
+  /* Filtros */
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .filtro-btn {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filtro-btn:hover, .filtro-btn.active {
+    background: #00ff88;
+    color: #000;
+    border-color: #00ff88;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 24px;
+  }
+  .producto {
+    background: #151515;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s;
+  }
+  .producto:hover { transform: translateY(-4px); }
+  .producto img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+  }
+  .prod-info { padding: 14px; }
+  .prod-info h3 {
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    min-height: 40px;
+  }
+  .precio {
+    color: #00ff88;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .btn-add {
+    background: #00ff88;
+    color: #000;
+    border: none;
+    width: 100%;
+    padding: 11px;
+    margin-top: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-add:hover { background: #00cc6a; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #111;
+    border-top: 1px solid #222;
+    padding: 28px 20px;
+  }
+  .footer-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .f-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+  .f-item svg {
+    width: 26px;
+    height: 26px;
+    color: #00ff88;
+  }
+  .f-item strong { font-size: 13px; }
+  .f-item span { font-size: 12px; color: #777; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .collections { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 500px) {
+    .collections { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">REMA<span>FAN</span>CARDS</div>
+    <nav>
+      <a href="#" class="active">INICIO</a>
+      <a href="#">ÁLBUM VIRTUAL</a>
+      <a href="#colecciones">COLECCIONES ▾</a>
+      <a href="#mis-cartas">MIS CARTAS</a>
+      <a href="#">NOVEDADES</a>
+      <a href="#">CONTACTO</a>
+    </nav>
+    <div class="icons">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+      <div class="cart-wrap">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        <div class="cart-count" id="cartCount">0</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>COLECCIONES <span>ADRENALYN XL</span></h1>
+  <p>Explora todas las colecciones de Adrenalyn XL desde 2009 hasta la actualidad</p>
+</section>
+
+<!-- COLECCIONES -->
+<section class="collections" id="colecciones">
+  <div class="col-card n1"><img src="https://via.placeholder.com/300x400/0a0a0a/00ff88?text=2009-10" alt="2009-10"><div class="col-info"><h3>2009-10</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n2"><img src="https://via.placeholder.com/300x400/0a0a0a/00bfff?text=2010-11" alt="2010-11"><div class="col-info"><h3>2010-11</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n3"><img src="https://via.placeholder.com/300x400/0a0a0a/ff2d55?text=2011-12" alt="2011-12"><div class="col-info"><h3>2011-12</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n4"><img src="https://via.placeholder.com/300x400/0a0a0a/ffcc00?text=2012-13" alt="2012-13"><div class="col-info"><h3>2012-13</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n5"><img src="https://via.placeholder.com/300x400/0a0a0a/bf5af2?text=2013-14" alt="2013-14"><div class="col-info"><h3>2013-14</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n6"><img src="https://via.placeholder.com/300x400/0a0a0a/5ac8fa?text=2014-15" alt="2014-15"><div class="col-info"><h3>2014-15</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n7"><img src="https://via.placeholder.com/300x400/0a0a0a/ff9f0a?text=2015-16" alt="2015-16"><div class="col-info"><h3>2015-16</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n8"><img src="https://via.placeholder.com/300x400/0a0a0a/30d158?text=2016-17" alt="2016-17"><div class="col-info"><h3>2016-17</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n9"><img src="https://via.placeholder.com/300x400/0a0a0a/64d2ff?text=2017-18" alt="2017-18"><div class="col-info"><h3>2017-18</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n10"><img src="https://via.placeholder.com/300x400/0a0a0a/ff375f?text=2018-19" alt="2018-19"><div class="col-info"><h3>2018-19</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n11"><img src="https://via.placeholder.com/300x400/0a0a0a/bf5af2?text=2019-20" alt="2019-20"><div class="col-info"><h3>2019-20</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n12"><img src="https://via.placeholder.com/300x400/0a0a0a/00c7be?text=2020-21" alt="2020-21"><div class="col-info"><h3>2020-21</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n13"><img src="https://via.placeholder.com/300x400/0a0a0a/ff453a?text=2021-22" alt="2021-22"><div class="col-info"><h3>2021-22</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n14"><img src="https://via.placeholder.com/300x400/0a0a0a/0a84ff?text=2022-23" alt="2022-23"><div class="col-info"><h3>2022-23</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n15"><img src="https://via.placeholder.com/300x400/0a0a0a/30d158?text=2023-24" alt="2023-24"><div class="col-info"><h3>2023-24</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n16"><img src="https://via.placeholder.com/300x400/0a0a0a/00bfff?text=2024-25" alt="2024-25"><div class="col-info"><h3>2024-25</h3><a href="#">VER COLECCIÓN →</a></div></div>
+  <div class="col-card n17" style="position:relative">
+    <div class="badge-nuevo">NUEVO</div>
+    <img src="https://via.placeholder.com/300x400/0a0a0a/00ff88?text=2025-26" alt="2025-26">
+    <div class="col-info"><h3>2025-26</h3><a href="#">VER COLECCIÓN →</a></div>
+  </div>
+</section>
+
+<!-- MIS CARTAS -->
+<section class="mis-cartas" id="mis-cartas">
+  <h2>MIS CARTAS DISPONIBLES</h2>
+  <p class="sub">Más de 200 cartas originales Panini Adrenalyn XL a la venta</p>
+
+  <div class="filtros" id="filtros">
+    <button class="filtro-btn active" onclick="filtrar('todas')">Todas</button>
+    <button class="filtro-btn" onclick="filtrar('2009-10')">2009-10</button>
+    <button class="filtro-btn" onclick="filtrar('2010-11')">2010-11</button>
+    <button class="filtro-btn" onclick="filtrar('2011-12')">2011-12</button>
+    <button class="filtro-btn" onclick="filtrar('2012-13')">2012-13</button>
+    <button class="filtro-btn" onclick="filtrar('2013-14')">2013-14</button>
+    <button class="filtro-btn" onclick="filtrar('2014-15')">2014-15</button>
+    <button class="filtro-btn" onclick="filtrar('2015-16')">2015-16</button>
+    <button class="filtro-btn" onclick="filtrar('2016-17')">2016-17</button>
+    <button class="filtro-btn" onclick="filtrar('2017-18')">2017-18</button>
+    <button class="filtro-btn" onclick="filtrar('2018-19')">2018-19</button>
+    <button class="filtro-btn" onclick="filtrar('2019-20')">2019-20</button>
+    <button class="filtro-btn" onclick="filtrar('2020-21')">2020-21</button>
+    <button class="filtro-btn" onclick="filtrar('2021-22')">2021-22</button>
+    <button class="filtro-btn" onclick="filtrar('2022-23')">2022-23</button>
+    <button class="filtro-btn" onclick="filtrar('2023-24')">2023-24</button>
+    <button class="filtro-btn" onclick="filtrar('2024-25')">2024-25</button>
+    <button class="filtro-btn" onclick="filtrar('2025-26')">2025-26</button>
+  </div>
+
+  <div class="productos" id="productos"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="f-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      <strong>COMPRA SEGURA</strong>
+      <span>Pago 100% seguro</span>
+    </div>
+    <div class="f-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+      <strong>ENVÍOS RÁPIDOS</strong>
+      <span>24/48h a toda España</span>
+    </div>
+    <div class="f-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      <strong>PRODUCTOS OFICIALES</strong>
+      <span>Cartas originales Panini</span>
+    </div>
+    <div class="f-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      <strong>ATENCIÓN AL CLIENTE</strong>
+      <span>Te ayudamos en lo que necesites</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ============================================
+  // AQUÍ PON TODAS TUS CARTAS (fácil de editar)
+  // ============================================
+  const cartas = [
+    // Ejemplos - borra estos y pon las tuyas
+    { nombre: "Messi 2010-11 Oro", precio: 18, foto: "https://via.placeholder.com/300x400/222/fff?text=Messi+2010", temporada: "2010-11" },
+    { nombre: "Cristiano Ronaldo 2012-13", precio: 15, foto: "https://via.placeholder.com/300x400/222/fff?text=CR7+2012", temporada: "2012-13" },
+    { nombre: "Neymar 2015-16", precio: 12, foto: "https://via.placeholder.com/300x400/222/fff?text=Neymar+2015", temporada: "2015-16" },
+    { nombre: "Iniesta 2009-10", precio: 9, foto: "https://via.placeholder.com/300x400/222/fff?text=Iniesta+2009", temporada: "200
