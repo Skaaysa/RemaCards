@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +16,9 @@ body{
 background:#050505;
 color:white;
 font-family:Arial, sans-serif;
+margin:0;
 }
+
 
 header{
 text-align:center;
@@ -23,52 +26,74 @@ padding:30px;
 border-bottom:1px solid #ffd900;
 }
 
+
 .logo{
 width:90px;
+border-radius:12px;
 }
+
 
 h1{
 color:#ffd900;
-font-size:40px;
+font-size:45px;
+margin:10px;
 }
+
 
 .subtitulo{
 color:#aaa;
+font-size:18px;
 }
+
 
 .menu a{
 color:white;
-margin:15px;
 text-decoration:none;
+margin:15px;
+font-weight:bold;
 }
+
+
+.menu a:hover{
+color:#ffd900;
+}
+
+
 
 .contenedor{
+
 max-width:1200px;
 margin:auto;
-padding:40px;
+padding:40px 20px;
+
 }
+
 
 .titulo{
+
 text-align:center;
-font-size:32px;
+font-size:35px;
 color:#ffd900;
 margin-bottom:40px;
+
 }
 
 
-.colecciones{
+
+.grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 
 }
 
 
+
 .card{
 
 background:#111;
-border-radius:20px;
+border-radius:25px;
 padding:25px;
 text-align:center;
 border:2px solid #222;
@@ -77,43 +102,66 @@ transition:.3s;
 }
 
 
+
 .card:hover{
 
 transform:translateY(-10px);
 border-color:#ffd900;
+box-shadow:0 0 25px #ffd900;
 
 }
+
 
 
 .card img{
 
 width:100%;
-height:220px;
-object-fit:cover;
+height:230px;
+object-fit:contain;
 border-radius:15px;
 
 }
 
 
+
 .card h2{
 
 color:#ffd900;
+font-size:28px;
 
 }
+
+
+
+.card p{
+
+color:#ccc;
+
+}
+
 
 
 .boton{
 
 display:inline-block;
 margin-top:15px;
-padding:12px 25px;
-border-radius:30px;
+padding:12px 30px;
 background:#ffd900;
 color:black;
-font-weight:bold;
+border-radius:30px;
 text-decoration:none;
+font-weight:bold;
 
 }
+
+
+
+.separador{
+
+margin-top:70px;
+
+}
+
 
 
 </style>
@@ -126,13 +174,17 @@ text-decoration:none;
 
 <header>
 
+
 <img class="logo" src="img/logo/RemaCards_logo_Wallapop.jpg">
 
+
 <h1>RemaCards</h1>
+
 
 <p class="subtitulo">
 La casa del coleccionista
 </p>
+
 
 
 <div class="menu">
@@ -152,25 +204,28 @@ La casa del coleccionista
 
 
 
+
 <div class="contenedor">
 
 
 <h2 class="titulo">
-🔥 Mis colecciones
+🔥 Colecciones destacadas
 </h2>
 
 
-<div class="colecciones">
+
+<div class="grid">
+
 
 
 <div class="card">
 
 <img src="img/logo/RemaCards_logo_Wallapop.jpg">
 
-<h2>MegaCracks 26/27</h2>
+<h2>MegaCracks</h2>
 
 <p>
-LaLiga MegaCracks 2026/27
+MegaCracks 26/27 y próximas colecciones
 </p>
 
 <a class="boton" href="megacracks2627.html">
@@ -185,10 +240,10 @@ Ver colección
 
 <img src="img/logo/RemaCards_logo_Wallapop.jpg">
 
-<h2>Adrenalyn XL 26/27</h2>
+<h2>Adrenalyn XL</h2>
 
 <p>
-Panini Adrenalyn XL
+Colecciones Panini Adrenalyn XL
 </p>
 
 <a class="boton" href="#">
@@ -196,7 +251,6 @@ Ver colección
 </a>
 
 </div>
-
 
 
 
@@ -204,10 +258,10 @@ Ver colección
 
 <img src="img/logo/RemaCards_logo_Wallapop.jpg">
 
-<h2>Topps 26/27</h2>
+<h2>Match Attax</h2>
 
 <p>
-Cartas Topps fútbol
+Cartas Match Attax fútbol
 </p>
 
 <a class="boton" href="#">
@@ -216,6 +270,38 @@ Ver colección
 
 </div>
 
+
+</div>
+
+
+
+
+
+<h2 class="titulo separador">
+⭐ Otros
+</h2>
+
+
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+
+<h2>Topps</h2>
+
+<p>
+Chrome, Merlin, Matchday...
+</p>
+
+<a class="boton" href="#">
+Ver colección
+</a>
+
+</div>
 
 
 
@@ -226,7 +312,7 @@ Ver colección
 <h2>DAKA</h2>
 
 <p>
-Colecciones especiales
+Colecciones premium
 </p>
 
 <a class="boton" href="#">
@@ -237,10 +323,29 @@ Ver colección
 
 
 
+<div class="card">
+
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+
+<h2>Próximamente</h2>
+
+<p>
+Nuevas colecciones y productos
+</p>
+
+<a class="boton" href="#">
+Ver más
+</a>
+
 </div>
 
 
 </div>
+
+
+
+</div>
+
 
 
 </body>
