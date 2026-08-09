@@ -4,297 +4,239 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RemaCards | La casa del coleccionista</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-<style>
+</head>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
 
+<body>
 
-body{
 
-background:#050505;
-color:white;
-font-family:'Inter',Arial,sans-serif;
+<header>
 
-}
+<div class="header-inner">
 
 
+<div class="logo">
 
-/* HEADER */
+REMA<span>CARDS</span>
 
-header{
+</div>
 
-background:#000;
-border-bottom:1px solid #ffd600;
-position:sticky;
-top:0;
-z-index:999;
 
-}
+<nav>
 
+<a href="index.html">INICIO</a>
 
-.header{
+<a href="#">ÁLBUM VIRTUAL</a>
 
-max-width:1400px;
-margin:auto;
-height:75px;
-padding:0 40px;
+<a href="colecciones.html">COLECCIONES ▾</a>
 
-display:flex;
-align-items:center;
-justify-content:space-between;
+<a href="cartas.html">MIS CARTAS</a>
 
-}
+<a href="#">NOVEDADES</a>
 
+<a href="contacto.html">CONTACTO</a>
 
+</nav>
 
-.logo{
 
-font-size:32px;
-font-weight:900;
-color:white;
+<div class="icons">
 
-}
+<span>🔍</span>
 
+<span>👤</span>
 
-.logo span{
+<span>🛒</span>
 
-color:#ffd600;
+</div>
 
-}
 
+</div>
 
 
-nav{
+</header>
 
-display:flex;
-gap:30px;
 
-}
 
 
 
-nav a{
+<section class="hero">
 
-color:#ddd;
-text-decoration:none;
-font-size:14px;
-font-weight:700;
 
-transition:.3s;
+<h1>
 
-}
+TU TIENDA DE CARTAS DE FÚTBOL
 
+</h1>
 
 
-nav a:hover{
+<p>
 
-color:#ffd600;
+MegaCracks • Adrenalyn XL • Match Attax • Topps • DAKA
 
-}
+</p>
 
 
+<div>
 
+<a class="boton" href="colecciones.html">
 
+VER COLECCIONES
 
-/* HERO */
+</a>
 
 
-.hero{
+<a class="boton boton-secundario" href="cartas.html">
 
-max-width:1400px;
-margin:auto;
-padding:100px 30px 70px;
-text-align:center;
+VER CARTAS
 
-}
+</a>
 
+</div>
 
 
-.hero h1{
+</section>
 
-font-size:60px;
-font-weight:900;
 
-}
 
 
 
-.hero h1 span{
-
-color:#ffd600;
-
-}
-
-
-
-.hero p{
-
-margin-top:20px;
-font-size:20px;
-color:#aaa;
-
-}
-
-
-
-.botones{
-
-margin-top:45px;
-
-}
-
-
-
-.boton{
-
-display:inline-block;
-padding:16px 40px;
-margin:10px;
-
-border-radius:35px;
-
-background:#ffd600;
-color:#000;
-
-font-weight:800;
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-
-
-.boton:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 25px #ffd600;
-
-}
-
-
-
-.boton2{
-
-background:#111;
-color:white;
-border:1px solid #ffd600;
-
-}
-
-
-
-
-
-.titulo{
-
-text-align:center;
-font-size:38px;
-margin:50px 0 35px;
-color:#ffd600;
-
-}
-
-<!-- COLECCIONES PRINCIPALES -->
+<section>
 
 
 <h2 class="titulo">
-🔥 Colecciones principales
+
+🔥 COLECCIONES DESTACADAS
+
 </h2>
 
 
-<section class="colecciones">
+
+<div class="collections">
 
 
 
-<div class="coleccion-card">
+<div class="col-card">
 
 <img src="img/colecciones/megacracks.png">
 
-<div class="info">
+<div class="col-info">
 
 <h3>
+
 MegaCracks
+
 </h3>
 
+
 <p>
-LaLiga • Cartas especiales • Colección 26/27
+
+Colecciones LaLiga y cartas especiales
+
 </p>
 
+
 <a href="megacracks2627.html">
+
 VER COLECCIÓN →
+
 </a>
 
-</div>
 
 </div>
 
+</div>
 
 
 
 
-<div class="coleccion-card">
+
+<div class="col-card">
 
 <img src="img/colecciones/adrenalyn.png">
 
-<div class="info">
+
+<div class="col-info">
+
 
 <h3>
+
 Adrenalyn XL
+
 </h3>
 
+
 <p>
-Panini • Álbumes y cartas oficiales
+
+Colecciones oficiales Panini
+
 </p>
 
+
 <a href="colecciones.html">
+
 VER COLECCIÓN →
+
 </a>
 
-</div>
 
 </div>
 
 
+</div>
 
 
 
 
-<div class="coleccion-card">
+
+
+<div class="col-card">
 
 <img src="img/colecciones/matchattax.png">
 
-<div class="info">
+
+<div class="col-info">
+
 
 <h3>
+
 Match Attax
+
 </h3>
 
+
 <p>
-Topps • Premier League y fútbol internacional
+
+Topps UEFA y fútbol internacional
+
 </p>
 
+
 <a href="#">
+
 VER COLECCIÓN →
+
 </a>
 
-</div>
 
 </div>
 
 
+</div>
+
+
+
+
+
+</div>
 
 
 </section>
@@ -302,266 +244,184 @@ VER COLECCIÓN →
 
 
 
+
+<section>
+
+
 <h2 class="titulo">
-✨ Otras colecciones
+
+⭐ OTRAS COLECCIONES
+
 </h2>
 
 
 
-
-<section class="colecciones">
-
+<div class="collections">
 
 
-<div class="coleccion-card">
+
+<div class="col-card">
 
 <img src="img/colecciones/topps.png">
 
-<div class="info">
+
+<div class="col-info">
+
 
 <h3>
+
 Topps
+
 </h3>
 
+
 <p>
-Chrome • UEFA • Ediciones especiales
+
+Chrome, Match Attax y cartas premium
+
 </p>
 
+
 <a href="#">
+
 VER COLECCIÓN →
+
 </a>
 
-</div>
 
 </div>
 
 
+</div>
 
 
 
-<div class="coleccion-card">
+
+
+<div class="col-card">
+
 
 <img src="img/colecciones/daka.png">
 
-<div class="info">
+
+<div class="col-info">
+
 
 <h3>
+
 DAKA
+
 </h3>
 
+
 <p>
-Colecciones premium
+
+Cartas premium para coleccionistas
+
 </p>
 
+
 <a href="#">
+
 VER COLECCIÓN →
+
 </a>
 
-</div>
 
 </div>
 
 
+</div>
 
-</section>
 
 
 
+<div class="col-card">
 
 
-<style>
+<img src="img/logo/RemaCards_logo_Wallapop.jpg">
 
 
-.colecciones{
+<div class="col-info">
 
-max-width:1400px;
-margin:auto;
 
-padding:20px 40px;
+<h3>
 
-display:grid;
+Próximamente
 
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
+</h3>
 
-gap:35px;
 
-}
+<p>
 
+Nuevas colecciones
 
+</p>
 
 
+<a href="#">
 
-.coleccion-card{
+VER MÁS →
 
+</a>
 
-background:
-linear-gradient(
-145deg,
-#151515,
-#070707
-);
 
+</div>
 
-border-radius:25px;
 
-overflow:hidden;
+</div>
 
-border:1px solid #333;
 
-transition:.35s;
 
-text-align:center;
+</div>
 
 
-}
+</section><!-- ALBUM VIRTUAL -->
 
-
-
-
-
-.coleccion-card:hover{
-
-transform:translateY(-12px);
-
-border-color:#ffd600;
-
-box-shadow:
-0 0 35px rgba(255,214,0,.35);
-
-
-}
-
-
-
-
-
-.coleccion-card img{
-
-
-width:100%;
-
-height:360px;
-
-object-fit:contain;
-
-padding:25px;
-
-background:#000;
-
-
-}
-
-
-
-
-
-.info{
-
-
-padding:25px;
-
-
-}
-
-
-
-
-.info h3{
-
-font-size:28px;
-
-color:#ffd600;
-
-font-weight:900;
-
-margin-bottom:10px;
-
-}
-
-
-
-
-.info p{
-
-color:#aaa;
-
-font-size:14px;
-
-margin-bottom:20px;
-
-}
-
-
-
-
-.info a{
-
-display:inline-block;
-
-padding:12px 30px;
-
-background:#ffd600;
-
-border-radius:30px;
-
-color:#000;
-
-font-weight:800;
-
-text-decoration:none;
-
-}
-
-
-
-</style><!-- CARTAS DESTACADAS -->
+<section class="album">
 
 
 <h2 class="titulo">
-🃏 Cartas disponibles
+
+📖 ÁLBUM VIRTUAL
+
 </h2>
 
 
-<section class="cartas">
+<p class="sub">
+
+Completa tus colecciones y descubre tus cartas favoritas
+
+</p>
 
 
-<div class="carta">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+<div class="album-grid">
+
+
+
+<div class="album-card">
+
 
 <h3>
-Carta disponible
-</h3>
 
-<p>
 MegaCracks 26/27
-</p>
 
-<strong>
-Disponible 🟢
-</strong>
-
-
-</div>
-
-
-
-<div class="carta">
-
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
-
-<h3>
-Carta especial
 </h3>
 
-<p>
-Adrenalyn XL
-</p>
 
-<strong>
-Disponible 🟢
-</strong>
+<div class="progress">
+
+<div style="width:25%"></div>
+
+</div>
+
+
+<p>
+
+25% completado
+
+</p>
 
 
 </div>
@@ -569,28 +429,72 @@ Disponible 🟢
 
 
 
-<div class="carta">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+<div class="album-card">
+
 
 <h3>
-Carta premium
+
+Adrenalyn XL 26/27
+
 </h3>
 
-<p>
-Topps / DAKA
-</p>
 
-<strong>
-Disponible 🟢
-</strong>
+<div class="progress">
+
+<div style="width:15%"></div>
+
+</div>
+
+
+<p>
+
+15% completado
+
+</p>
 
 
 </div>
 
+
+
+
+
+<div class="album-card">
+
+
+<h3>
+
+Match Attax 26/27
+
+</h3>
+
+
+<div class="progress">
+
+<div style="width:0%"></div>
+
+</div>
+
+
+<p>
+
+Próximamente
+
+</p>
+
+
+</div>
+
+
+
+</div>
 
 
 </section>
+
+
+
 
 
 
@@ -598,17 +502,22 @@ Disponible 🟢
 <!-- VENTAJAS -->
 
 
-<section class="ventajas">
+<section class="beneficios">
 
 
 <div>
 
+
 <h3>
-🛡️ Cartas protegidas
+
+🛡️ CARTAS PROTEGIDAS
+
 </h3>
 
 <p>
-Todas preparadas para coleccionistas
+
+Preparadas para coleccionistas
+
 </p>
 
 </div>
@@ -617,12 +526,37 @@ Todas preparadas para coleccionistas
 
 <div>
 
+
 <h3>
-📦 Envíos seguros
+
+📦 ENVÍOS SEGUROS
+
 </h3>
 
 <p>
+
 Preparación cuidada
+
+</p>
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+
+⭐ COLECCIONES OFICIALES
+
+</h3>
+
+<p>
+
+Panini, Topps y más
+
 </p>
 
 </div>
@@ -631,12 +565,17 @@ Preparación cuidada
 
 <div>
 
+
 <h3>
-⚽ Colecciones oficiales
+
+💬 ATENCIÓN AL CLIENTE
+
 </h3>
 
 <p>
-Panini, Topps y más
+
+Siempre disponibles
+
 </p>
 
 </div>
@@ -648,37 +587,56 @@ Panini, Topps y más
 
 
 
+
+
+
+<!-- FOOTER -->
+
+
 <footer>
 
 
 <h2>
-REMA<span>CARDS</span>
+
+REMACARDS
+
 </h2>
 
 
 <p>
-La casa del coleccionista 🃏
+
+La casa del coleccionista
+
 </p>
+
 
 
 <div class="footer-links">
 
+
 <a href="#">
+
 Instagram
+
 </a>
 
 
 <a href="#">
+
 TikTok
+
 </a>
 
 
-<a href="#">
+<a href="contacto.html">
+
 Contacto
+
 </a>
 
 
 </div>
+
 
 
 <p class="copy">
@@ -688,290 +646,11 @@ Contacto
 </p>
 
 
+
 </footer>
-
-
-
-
-
-
-<style>
-
-
-.cartas{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:20px 40px;
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:30px;
-
-}
-
-
-
-
-.carta{
-
-
-background:#111;
-
-border:1px solid #333;
-
-border-radius:25px;
-
-padding:25px;
-
-text-align:center;
-
-transition:.3s;
-
-
-}
-
-
-
-
-.carta:hover{
-
-border-color:#ffd600;
-
-transform:translateY(-8px);
-
-}
-
-
-
-
-.carta img{
-
-width:160px;
-
-height:220px;
-
-object-fit:contain;
-
-}
-
-
-
-
-.carta h3{
-
-color:#ffd600;
-
-font-size:22px;
-
-margin:15px;
-
-}
-
-
-
-
-.carta strong{
-
-display:inline-block;
-
-margin-top:15px;
-
-background:#00c853;
-
-padding:8px 20px;
-
-border-radius:20px;
-
-}
-
-
-
-
-
-.ventajas{
-
-
-max-width:1200px;
-
-margin:80px auto;
-
-padding:30px;
-
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-
-gap:25px;
-
-text-align:center;
-
-
-}
-
-
-
-
-
-.ventajas div{
-
-
-background:#111;
-
-border-radius:20px;
-
-padding:25px;
-
-border:1px solid #222;
-
-
-}
-
-
-
-
-
-.ventajas h3{
-
-
-color:#ffd600;
-
-
-}
-
-
-
-
-
-.ventajas p{
-
-
-color:#aaa;
-
-
-}
-
-
-
-
-
-footer{
-
-
-margin-top:70px;
-
-padding:40px;
-
-background:#090909;
-
-border-top:1px solid #ffd600;
-
-text-align:center;
-
-
-}
-
-
-
-footer h2{
-
-
-font-size:32px;
-
-
-}
-
-
-
-footer span{
-
-
-color:#ffd600;
-
-
-}
-
-
-
-.footer-links{
-
-
-margin:25px;
-
-
-}
-
-
-
-.footer-links a{
-
-
-color:white;
-
-text-decoration:none;
-
-margin:15px;
-
-
-}
-
-
-
-.copy{
-
-
-color:#777;
-
-}
-
-
-
-@media(max-width:700px){
-
-
-.header{
-
-flex-direction:column;
-
-height:auto;
-
-padding:20px;
-
-
-}
-
-
-nav{
-
-display:none;
-
-}
-
-
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-
-}
-
-
-</style>
 
 
 
 </body>
 
 </html>
-backup antes rediseño PMACA
