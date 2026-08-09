@@ -16,65 +16,44 @@ body{
 background:#050505;
 color:white;
 font-family:Arial, sans-serif;
-margin:0;
 }
-
-
-header{
-text-align:center;
-padding:30px;
-border-bottom:1px solid #ffd900;
-}
-
-
-.logo{
-width:90px;
-border-radius:12px;
-}
-
-
-h1{
-color:#ffd900;
-font-size:45px;
-margin:10px;
-}
-
-
-.subtitulo{
-color:#aaa;
-font-size:18px;
-}
-
-
-.menu a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-
-
-.menu a:hover{
-color:#ffd900;
-}
-
 
 
 .contenedor{
-
 max-width:1200px;
 margin:auto;
-padding:40px 20px;
-
+padding:50px 20px;
 }
 
 
 .titulo{
+text-align:center;
+font-size:38px;
+color:#ffd900;
+margin-bottom:10px;
+}
+
+
+.subtitulo{
+text-align:center;
+color:#aaa;
+margin-bottom:50px;
+}
+
+
+
+.seccion{
+
+margin-bottom:70px;
+
+}
+
+
+.seccion h2{
 
 text-align:center;
-font-size:35px;
 color:#ffd900;
-margin-bottom:40px;
+font-size:28px;
 
 }
 
@@ -83,8 +62,9 @@ margin-bottom:40px;
 .grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
+margin-top:35px;
 
 }
 
@@ -93,10 +73,10 @@ gap:30px;
 .card{
 
 background:#111;
-border-radius:25px;
-padding:25px;
+border:1px solid #222;
+border-radius:20px;
+padding:20px;
 text-align:center;
-border:2px solid #222;
 transition:.3s;
 
 }
@@ -107,7 +87,7 @@ transition:.3s;
 
 transform:translateY(-10px);
 border-color:#ffd900;
-box-shadow:0 0 25px #ffd900;
+box-shadow:0 0 25px #ffd90055;
 
 }
 
@@ -124,13 +104,12 @@ border-radius:15px;
 
 
 
-.card h2{
+.card h3{
 
 color:#ffd900;
-font-size:28px;
+font-size:22px;
 
 }
-
 
 
 .card p{
@@ -156,14 +135,6 @@ font-weight:bold;
 
 
 
-.separador{
-
-margin-top:70px;
-
-}
-
-
-
 </style>
 
 </head>
@@ -172,44 +143,24 @@ margin-top:70px;
 <body>
 
 
-<header>
+<div class="contenedor">
 
 
-<img class="logo" src="img/logo/RemaCards_logo_Wallapop.jpg">
-
-
-<h1>RemaCards</h1>
-
+<h1 class="titulo">
+🏆 Colecciones RemaCards
+</h1>
 
 <p class="subtitulo">
-La casa del coleccionista
+Explora nuestras colecciones de cartas de fútbol
 </p>
 
 
 
-<div class="menu">
-
-<a href="index.html">Inicio</a>
-
-<a href="colecciones.html">Colecciones</a>
-
-<a href="cartas.html">Cartas</a>
-
-<a href="contacto.html">Contacto</a>
-
-</div>
+<div class="seccion">
 
 
-</header>
-
-
-
-
-<div class="contenedor">
-
-
-<h2 class="titulo">
-🔥 Colecciones destacadas
+<h2>
+🔥 Colecciones principales
 </h2>
 
 
@@ -220,12 +171,14 @@ La casa del coleccionista
 
 <div class="card">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+<img src="img/colecciones/megacracks.png">
 
-<h2>MegaCracks</h2>
+<h3>
+MegaCracks
+</h3>
 
 <p>
-MegaCracks 26/27 y próximas colecciones
+LaLiga MegaCracks Panini
 </p>
 
 <a class="boton" href="megacracks2627.html">
@@ -236,11 +189,14 @@ Ver colección
 
 
 
+
 <div class="card">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+<img src="img/colecciones/adrenalyn.png">
 
-<h2>Adrenalyn XL</h2>
+<h3>
+Adrenalyn XL
+</h3>
 
 <p>
 Colecciones Panini Adrenalyn XL
@@ -254,14 +210,17 @@ Ver colección
 
 
 
+
 <div class="card">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
+<img src="img/colecciones/topps.png">
 
-<h2>Match Attax</h2>
+<h3>
+Topps
+</h3>
 
 <p>
-Cartas Match Attax fútbol
+Topps Chrome, Match Attax y especiales
 </p>
 
 <a class="boton" href="#">
@@ -271,17 +230,39 @@ Ver colección
 </div>
 
 
+
+
+<div class="card">
+
+<img src="img/colecciones/daka.png">
+
+<h3>
+DAKA
+</h3>
+
+<p>
+Cartas especiales para coleccionistas
+</p>
+
+<a class="boton" href="#">
+Ver colección
+</a>
+
 </div>
 
 
 
+</div>
+
+</div>
 
 
-<h2 class="titulo separador">
-⭐ Otros
+
+<div class="seccion">
+
+<h2>
+⭐ Próximamente
 </h2>
-
-
 
 
 <div class="grid">
@@ -289,63 +270,37 @@ Ver colección
 
 <div class="card">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
-
-<h2>Topps</h2>
+<h3>
+Match Attax
+</h3>
 
 <p>
-Chrome, Merlin, Matchday...
+Colecciones Topps Match Attax
 </p>
 
-<a class="boton" href="#">
-Ver colección
-</a>
-
 </div>
-
 
 
 <div class="card">
 
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
-
-<h2>DAKA</h2>
-
-<p>
-Colecciones premium
-</p>
-
-<a class="boton" href="#">
-Ver colección
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="img/logo/RemaCards_logo_Wallapop.jpg">
-
-<h2>Próximamente</h2>
+<h3>
+Monopoly Prizm
+</h3>
 
 <p>
-Nuevas colecciones y productos
+Cartas premium
 </p>
 
-<a class="boton" href="#">
-Ver más
-</a>
-
 </div>
 
 
 </div>
 
 
-
 </div>
 
+
+</div>
 
 
 </body>
